@@ -1,0 +1,85 @@
+@import './common.less';
+.task-list {
+    .drop-down-menu {
+        position: fixed;
+        top: 0;
+        right: 20px;
+        transform-origin: center top 0;
+        z-index: 2000;
+        background: #fff;
+        list-style: none;
+        border: 1px solid #e6ebf5;
+        border-radius: 4px;
+        box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
+        li {
+            line-height: 36px;
+            padding: 0 20px;
+            margin: 0;
+            font-size: 14px;
+            color: #5a5e66;
+            cursor: pointer;
+            outline: none;
+        }
+    }
+}
+
+.link {
+    .task-item {
+
+        position: relative;
+        &::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            right: 35px;
+            transform: translateY(-50%);
+            .arrow-right(#999, 13px);
+        }
+    }
+}
+
+.task-item {
+    padding: 15px;
+    background: @normal-color;
+    margin: 15px 0;
+
+    p {
+        margin: 0;
+        line-height: 2em;
+
+        &.other-info {
+            color: @text-disable-color;
+            span {
+                margin-right: 15px;
+            }
+        }
+
+        &.address {
+            color: @text-disable-color;
+        }
+        .state {
+            font-weight: bold;
+            padding-right: 15px;
+            &.undone {
+                color: red;
+            }
+            &.done {
+                color: green;
+            }
+        }
+        .rackName {
+            font-weight: 500;
+            font-size: 15px;
+            color: @text-color;
+        }
+    }
+
+}
+
+
+.empty-list {
+    position: fixed;
+    top: 40%;
+    width: 100%;
+    text-align: center;
+}

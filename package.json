@@ -1,0 +1,55 @@
+{
+  "name": "xtools-smartrack-h5",
+  "version": "1.0.0",
+  "description": "xtools 智能货架 h5",
+  "main": "index.js",
+  "scripts": {
+    "dev": "cross-env DIST_ENV=dev MOCK=true webpack-dev-server --config webpack.dev.config.js --hot",
+    "build": "webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@git.intra.im:frontend/xtools-smartrack-h5.git"
+  },
+  "keywords": [
+    "xtools",
+    "smartrack",
+    "h5",
+    "fe"
+  ],
+  "author": "ada",
+  "license": "ISC",
+  "dependencies": {
+    "@lingshou/browser-cat": "^1.1.5",
+    "@lingshou/jsb-base": "^3.0.32",
+    "@lingshou/logger": "^1.0.2",
+    "react": "^16.4.0",
+    "react-dom": "^16.4.0",
+    "react-router-dom": "^4.2.2",
+    "whatwg-fetch": "^2.0.4"
+  },
+  "devDependencies": {
+    "autoprefixer": "^8.5.1",
+    "clean-webpack-plugin": "^0.1.19",
+    "cross-env": "^5.1.6",
+    "css-loader": "^0.28.11",
+    "extract-text-webpack-plugin": "^4.0.0-beta.0",
+    "html-webpack-plugin": "^3.2.0",
+    "less": "^3.0.4",
+    "less-loader": "^4.1.0",
+    "postcss-loader": "^2.1.5",
+    "style-loader": "^0.21.0",
+    "ts-loader": "^4.3.0",
+    "tslint": "^5.10.0",
+    "tslint-loader": "^3.6.0",
+    "tslint-react": "^3.6.0",
+    "typescript": "^2.8.3",
+    "url-loader": "^1.0.1",
+    "webpack": "^4.8.3",
+    "webpack-dev-server": "^3.1.4",
+    "webpack-cli": "^2.1.4",
+    "@types/react": "^16.3.14",
+    "@types/react-dom": "^16.0.5",
+    "@types/react-router-dom": "^4.2.6"
+  }
+}

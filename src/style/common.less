@@ -1,0 +1,62 @@
+@import 'common/variables.less';
+@import 'common/preset.less';
+@import 'common/button';
+.footer {
+    height: 65px;
+}
+
+.button-wrap {
+    padding: 15px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    margin: 0 !important;
+    button + button {
+        margin-top: 15px;
+    }
+}
+
+h3 {
+    line-height: 2em;
+}
+
+select {
+    flex: 1 1 0;
+    border: none;
+    background: #fff;
+    -webkit-appearance: none;
+    height: 35px;
+    .placeholder-color(#ccc);
+    direction: rtl;
+    padding-right: 15px;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    option {
+        direction: ltr;
+    }
+    &:focus {
+        border: none;
+        outline: none;
+    }
+}
+
+.block-warp {
+    padding: 15px;
+    ol {
+        padding: 0 20px;
+        line-height: 2rem;
+
+    }
+    ul {
+        li {
+            list-style: none;
+        }
+    }
+}
+
+.footer-button {
+    .button-primary(100%, 35px);
+}
+
+.footer-button-normal {
+    .button-normal(100%, 35px);
+}

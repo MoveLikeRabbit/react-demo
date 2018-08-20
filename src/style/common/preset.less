@@ -1,0 +1,122 @@
+// 省略号
+.multi-line-ellipsis(@line: 1) {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: @line;
+    -webkit-box-orient: vertical;
+    word-wrap: break-word;
+}
+
+// 向右箭头
+.arrow-right(@color: #999, @length: 9px) {
+    border: @color solid 1px;
+    width: @length;
+    height: @length;
+    border-bottom: none;
+    border-left: none;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    display: inline-block;
+}
+
+// 占位符颜色设置
+.placeholder-color(@color) {
+    &::-webkit-input-placeholder { /* WebKit browsers */
+        color: @color;
+    }
+}
+
+// 隐藏滚动条 ps.微信平台下iOS不兼容
+.hide-scrollbar() {
+    &::-webkit-scrollbar-track {
+        background-color: transparent;
+    }
+
+    &::-webkit-scrollbar {
+        display: none;
+        width: 0;
+        height: 0;
+        color: transparent;
+        background-color: transparent;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: transparent;
+    }
+}
+
+/* ======= 1px border ====== */
+
+// border top
+.borderT(@color) {
+    border-top:1px solid @color;
+    @media only screen and (-webkit-min-device-pixel-ratio: 2),
+    only screen and (min-device-pixel-ratio: 2) {
+        background-image: linear-gradient(to bottom, @color 0%, @color 50%, transparent 50%, transparent 100%);
+        background-size: 100% 1px;
+        background-repeat: no-repeat;
+        background-position: top;
+        border: none;
+    }
+}
+
+//border bottom
+.borderB(@color) {
+    border-bottom:1px solid @color;
+    @media only screen and (-webkit-min-device-pixel-ratio: 2),
+    only screen and (min-device-pixel-ratio: 2) {
+        background-image: linear-gradient(to top, @color 0%, @color 50%, transparent 50%, transparent 100%);
+        background-size: 100% 1px;
+        background-repeat: no-repeat;
+        background-position: bottom;
+        border: none;
+    }
+}
+
+//border right
+.borderR(@color) {
+    border-right:1px solid @color;
+    @media only screen and (-webkit-min-device-pixel-ratio: 2),
+    only screen and (min-device-pixel-ratio: 2) {
+        background-image: linear-gradient(to left, @color, @color 50%, transparent 50%);
+        background-size: 1px 100%;
+        background-repeat: no-repeat;
+        background-position: right top;
+        border: none;
+    }
+}
+// border left
+.borderL(@color) {
+    border-left:1px solid @color;
+    @media only screen and (-webkit-min-device-pixel-ratio: 2),
+    only screen and (min-device-pixel-ratio: 2) {
+        background-image: linear-gradient(to right, @color, @color 50%, transparent 50%);
+        background-size: 1px 100%;
+        background-repeat: no-repeat;
+        background-position: left top;
+        border:none;
+    }
+}
+
+// all borders
+.borderTRBL(@color) {
+    border:1px solid @color;
+    @media only screen and (-webkit-min-device-pixel-ratio: 2),
+    only screen and (min-device-pixel-ratio: 2) {
+        background-image: linear-gradient(to bottom, @color, @color 50%, transparent 50%),
+        linear-gradient(to left, @color, @color 50%, transparent 50%),
+        linear-gradient(to top, @color, @color 50%, transparent 50%),
+        linear-gradient(to right, @color, @color 50%, transparent 50%);
+
+        background-size: 100% 1px, 1px 100%, 100% 1px, 1px 100%;
+        background-repeat: no-repeat;
+        background-position: top, right top, bottom, left top;
+        border: none;
+    }
+}
+
+.no-border() {
+    border: none;
+    background-image: none;
+}

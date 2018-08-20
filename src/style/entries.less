@@ -1,0 +1,34 @@
+@import 'common/variables.less';
+@import 'common/preset.less';
+
+.entries {
+    background: #fff;
+    list-style: none;
+    margin: 15px 0;
+
+    .entry-item {
+        margin-left: 15px;
+        font-size: 16px;
+        position: relative;
+
+        &:not(:last-child) {
+            .borderB(@border-color)
+        }
+
+
+        a {
+            color: @text-color;
+            display: inline-block;
+            width: 100%;
+            padding: 15px 0;
+
+            &::after {
+                content: '';
+                position: absolute;
+                right: 15px;
+                .arrow-right();
+            }
+        }
+    }
+}
+

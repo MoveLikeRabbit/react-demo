@@ -1,0 +1,1 @@
+module.exports = 'sid=07eb7700-f923-4205-b009-d5ff8011e13e;';

@@ -1,0 +1,38 @@
+@import './variables.less';
+
+// Buttons
+.button-primary(@width: 100%, @height, @border-radius: 5px) {
+    display: inline-block;
+    text-align: center;
+    font-weight: 500;
+
+    .button-color(@text-color, @primary-color);
+    .button-width(@width, @height, @border-radius);
+
+    &.disable,
+    &[disabled] {
+        .button-color(@text-disable-color, @primary-disable-color);
+    }
+}
+
+.button-normal(@width: 100%, @height, @border-radius: 5px) {
+    display: inline-block;
+    text-align: center;
+
+    .button-color(@text-color, @normal-color, @border-color);
+    .button-width(@width, @height, @border-radius);
+}
+
+
+.button-color(@color; @background; @border: @background; @border-width: 1px) {
+    color: @color;
+    background-color: @background;
+    border: @border-width solid @border;
+}
+
+.button-width(@width, @height, @border-radius) {
+    width: @width;
+    height: @height;
+    line-height: @height - 2px;  // 减掉border的高度
+    border-radius: @border-radius;
+}

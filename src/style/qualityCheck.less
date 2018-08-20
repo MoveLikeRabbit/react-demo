@@ -1,0 +1,129 @@
+@import './common';
+
+.check-steps {
+    &.container {
+        line-height: 500px;
+        text-align: center;
+        font-size: 20px;
+        font-weight: bold;
+    }
+    .steps > li {
+        font-weight: bold;
+        font-size: 16px;
+        line-height: 3;
+    }
+    .unlock-box {
+        width: 80px;
+        height: 80px;
+        border-radius: 10px;
+        border: 1px solid #000;
+        position: relative;
+    }
+    .unlock.icon {
+        color: #000;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        position: absolute;
+        margin-left: 3px;
+        margin-top: 10px;
+        width: 26px;
+        height: 12px;
+        border: solid 2px currentColor;
+        border-radius: 1px;
+    }
+    .unlock.icon:before {
+        content: '';
+        position: absolute;
+        left: 4px;
+        top: -16px;
+        width: 10px;
+        height: 8px;
+        border-radius: 8px 8px 0 0;
+        border-top: solid 2px currentColor;
+        border-left: solid 2px currentColor;
+        border-right: solid 2px currentColor;
+    }
+
+    .unlock.icon:after {
+        content: '';
+        position: absolute;
+        left: 4px;
+        top: -8px;
+        width: 2px;
+        height: 6px;
+        background-color: currentColor;
+    }
+
+}
+
+.multimedia-check {
+    .multi-box {
+        height: 200px;
+        text-align: center;
+        background: #eee;
+        .desc {
+            line-height: 200px;
+            &.normal {
+                color: green;
+            }
+            &.unusual {
+                color: red;
+            }
+        }
+    }
+}
+
+
+
+.check-result {
+    .title {
+        padding: 0 15px;
+    }
+    .result-list {
+        background: #fff;
+        list-style: none;
+        margin: 15px 0;
+
+        .result-item {
+            margin-left: 15px;
+            font-size: 16px;
+            position: relative;
+            .borderB(@border-color);
+            &:not(:first-child)::before {
+                content: " ";
+                position: absolute;
+                top: 0;
+                right: 0;
+                height: 1px;
+                border-top: 1px solid @border-color;
+                color: #d9d9d9;
+                transform-origin: 0 0;
+                transform: scaleY(.5);
+                left: 0;
+            }
+            .result-item-inner {
+                padding: 10px 0;
+                display: flex;
+                justify-content: space-between;
+                .function {
+                    line-height: 35px;
+                    flex-grow: 1;
+                }
+                .select {
+                    text-align: right;
+                    display: inline;
+                    margin-right: 20px;
+                }
+                &::after {
+                    content: '';
+                    position: absolute;
+                    right: 15px;
+                    .arrow-right();
+                    top: 22px
+                }
+            }
+
+        }
+    }
+}

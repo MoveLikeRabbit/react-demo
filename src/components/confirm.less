@@ -1,0 +1,57 @@
+@import "../style/common/variables";
+.confirm {
+    z-index: 100;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    min-width: 70%;
+    max-width: 80%;
+    font-size: 14px;
+    text-align: center;
+    word-break: break-all;
+    line-height: 16px;
+    border-radius: 4px;
+    padding: 10px 25px;
+    background: #fff;
+    transform: translateX(-50%) translateY(-50%);
+    .title {
+        font-size: 18px;
+        font-weight: 500;
+        padding: 10px 0;
+    }
+    .content {
+        font-size: 17px;
+        line-height: 1.5;
+    }
+    .footer {
+        display: flex;
+        justify-content: space-between;
+        button {
+            height: 35px;
+            text-align: center;
+            font-weight: 500;
+            border-radius: 5px;
+            margin: 15px 5px;
+            padding: 0 10px ;
+            flex-grow: 1;
+            color: @text-color;
+            &.button-primary {
+                background-color: @primary-color;
+                border: 1px solid @primary-color;
+            }
+            &.button-normal {
+                border: 1px solid @border-color;
+            }
+        }
+    }
+}
+
+.confirm-mask {
+    z-index: 99;
+    position: fixed;
+    background: rgba(0, 0, 0, .6);
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+}
